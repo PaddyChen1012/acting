@@ -28,7 +28,6 @@
         .stars1:after {
             content: " ";
             position: absolute;
-            /* top: 2000px; */
             width: 1px;
             height: 1px;
             background: transparent;
@@ -46,7 +45,6 @@
         .stars2:after {
             content: " ";
             position: absolute;
-            /* top: 2000px; */
             width: 2px;
             height: 2px;
             background: transparent;
@@ -64,7 +62,6 @@
         .stars3:after {
             content: " ";
             position: absolute;
-            /* top: 2000px; */
             width: 3px;
             height: 3px;
             background: transparent;
@@ -98,7 +95,7 @@
         main .top-details{
             position: absolute;
             bottom: 0;padding: 0 1rem;
-            background: linear-gradient(0deg, #222222 50%, transparent 100%);
+            background: linear-gradient(0deg, #1b1b1b 0%, transparent 100%);
             order: 1;
             width: 100%;
             z-index: 1;
@@ -110,10 +107,9 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-        text-align: center;}
-        main .top-text{
-            margin-bottom: 1rem;
+            text-align: center;
         }
+        main .top-text{margin-bottom: 1rem;}
         main .btn {
             position: relative;
             display: block;
@@ -152,7 +148,7 @@
         }
         .btn-box{margin-top: 1rem;}
         .btn-box .btn{margin: auto;}
-        .top img{width: 100%;transform: rotateY(180deg);}
+        .top img{width: 100%;-webkit-filter: drop-shadow(0px 0px 15px #f7d366);}
         main .features {
             position: relative;
             background: url(images/bg-features.png) no-repeat center top/cover;
@@ -160,9 +156,9 @@
             text-align: center;
             z-index: 1;
         }
-        main .features-sticker {position: absolute;z-index: -1;}
-        main .features-sticker-1 {max-width: 78px;top: 3%;left: 0;}
-        main .features-sticker-2 {max-width: 66px;right: 0;bottom: 5%;}
+        main .features-sticker {position: absolute;-webkit-filter: drop-shadow(0px 0px 15px #f7d366);z-index: -1;}
+        main .features-sticker-1 {max-width: 78px;top: 3%;right: 0;}
+        main .features-sticker-2 {max-width: 130px;bottom: 5%;left: 0;}
         .container{
             display: flex;
             flex-wrap: wrap;
@@ -229,7 +225,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: linear-gradient(0deg, #222222 0%, transparent 100%);
+            background: linear-gradient(0deg, #232323 0%, transparent 100%);
         }
         .acting-word>div{
             position: absolute;
@@ -270,21 +266,22 @@
                 bottom: 50%;
                 background: unset;
                 transform: translateY(50%);
-                width: auto;
-                margin-right: 25%;
+                width: 40%;
+                margin-left: 40%;
             }
-            .top img{width: 25%;margin-left: 25%;}
+            .top img{width: 30%;margin-right: 30%;}
             main .top-title {font-size: 51px;margin-bottom: 1rem;}
             main .top-title strong {font-size: 62px;}
-            main .top-title,main .top-text {text-align: end;}
-            main .btn{margin: 0 0 0 auto;}
+            main .top-title,main .top-text {text-align: start;}
+            main .btn{margin: 0 auto 0 0;}
             .container .btn{margin: auto;}
             main .features {padding: 8% 0 8%;background-size: 100% 100%;}
-            main .features-sticker-1 {max-width: 258px;top: 0%;left: 0%;}
-            main .features-sticker-2 {max-width: 236px;right: 0%;bottom: 0%;}
+            main .features-sticker-1 {max-width: 258px;top: 0%;right: 0%;}
+            main .features-sticker-2 {max-width: 420px;bottom: 0%;left: 0%;}
             .acting{width: 20%;font-size: 1.25rem;}
             .acting>div{position: absolute;top: -30%;}
             .acting {padding: 5rem 1rem 1rem;}
+            .acting-word::before {background: unset;}
             footer {padding: 13% 0 5%;}
         }
         @media (min-width: 1200px){
@@ -327,12 +324,12 @@
                 </p>
                 <a class="btn" href="viber://chat/?number=%2B959251783237">ကြှနျုပျတို့ကိုဆကျသှယျရနျ</a>
             </div>
-            <img src="images/phone.png" alt="">
+            <img src="images/614XVGB1UEL._AC_SL1000_-removebg-preview.png" alt="">
         </section>
         <section class="features">
             <div class="container">
-                <img alt="" class="features-sticker features-sticker-1 lazy aos-init aos-animate" data-aos="zoom-in" src="https://riches888.com/wp-content/themes/riches888v3/assets/images/dice-1.png" style="">
-                <img alt="" class="features-sticker features-sticker-2 lazy aos-init" data-aos="zoom-in" src="https://riches888.com/wp-content/themes/riches888v3/assets/images/dice-2.png" style="">
+                <img alt="" class="features-sticker features-sticker-1 lazy aos-init aos-animate" data-aos="zoom-in" src="images/dice-1.png" style="">
+                <img alt="" class="features-sticker features-sticker-2 lazy aos-init" data-aos="zoom-in" src="images/360_F_432365767_gEadqGiMeiyg45ayRpyrPEtIoL9MyzfV-removebg-preview.png" style="">
                 <div class="stars1"></div>
                 <div class="stars2"></div>
                 <div class="stars3"></div>
