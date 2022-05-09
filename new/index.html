@@ -17,6 +17,8 @@
             background: url(images/BG1.jpg)no-repeat top center/cover;
             overflow-x: hidden;
         }
+        .ph{display: block;}
+        .pc{display: none;}
         .stars1 {
             width: 1px;
             height: 1px;
@@ -78,7 +80,8 @@
         nav{width: 100%;text-align: center;}
         .logo{width: 50%;max-width: 320px;margin: 0 auto 1.5rem;}
         .features .logo{max-width: 240px;}
-        .features .logo.bottom{max-width: 120px;margin: 1.5rem auto 0;}
+        .logo.bottom{max-width: 120px;margin: 1.5rem auto 0;}
+        footer .logo.bottom {margin: 0 auto 1.5rem;}
         main{
             width: 100%;
             overflow: hidden;
@@ -159,6 +162,9 @@
         main .features-sticker {position: absolute;-webkit-filter: drop-shadow(0px 0px 15px #f7d366);z-index: -1;}
         main .features-sticker-1 {max-width: 78px;top: 3%;right: 0;}
         main .features-sticker-2 {max-width: 130px;bottom: 5%;left: 0;}
+        main .features-sticker-3 {max-width: 220px;top: 5%;left: 0;-webkit-filter:unset;}
+        main .features-sticker-4 {max-width: 240px;bottom: 0;right: 0;}
+
         .container{
             display: flex;
             flex-wrap: wrap;
@@ -272,8 +278,12 @@
             .container{max-width: 540px;}
         }
         @media (min-width: 768px){
+            .ph{display: none;}
+            .pc{display: block;}
             .container{max-width: 720px;}
+            .acting-word>div{bottom: -4rem;}
             footer .container{
+                width: 70%;
                 height: auto;
                 overflow: inherit;
             }
@@ -398,6 +408,9 @@
             </div>
         </section>
         <footer>
+            <img alt="" class="features-sticker features-sticker-3 lazy aos-init pc" data-aos="zoom-in" src="images/360_F_476753391_D4aJUVQyk5C1O3FztF8tQO9efrfrPwKD-removebg-preview.png" style="">
+            <img alt="" class="features-sticker features-sticker-4 lazy aos-init pc" data-aos="zoom-in" src="images/Gold-Delux-First-1024x683-removebg-preview.png" style="">
+            <img class="logo bottom" src="images/logo w.webp" alt="">
             <div class="container">
                 <ul class="img_box">
                     <li class="game"><img class="w-100" src="images/LOGO/yb.png" alt=""></li>
@@ -418,16 +431,20 @@
                     <li class="game"><img class="w-100" src="images/LOGO/tez.png" alt=""></li>
                     <li class="game"><img class="w-100" src="images/LOGO/ug.png" alt=""></li>
                     <li class="game"><img class="w-100" src="images/LOGO/win568.png" alt=""></li>
-                    <li class="game"><img class="w-100" src="images/LOGO/yb.png" alt=""></li>
-                    <li class="game"><img class="w-100" src="images/LOGO/ag.png" alt=""></li>
-                    <li class="game"><img class="w-100" src="images/LOGO/bk89.png" alt=""></li>
-                    <li class="game"><img class="w-100" src="images/LOGO/cq9.png" alt=""></li>
-                    <li class="game"><img class="w-100" src="images/LOGO/evo.png" alt=""></li>
+                    <li class="game ph"><img class="w-100" src="images/LOGO/yb.png" alt=""></li>
+                    <li class="game ph"><img class="w-100" src="images/LOGO/ag.png" alt=""></li>
+                    <li class="game ph"><img class="w-100" src="images/LOGO/bk89.png" alt=""></li>
+                    <li class="game ph"><img class="w-100" src="images/LOGO/cq9.png" alt=""></li>
+                    <li class="game ph"><img class="w-100" src="images/LOGO/evo.png" alt=""></li>
                 </ul>
             </div>
         </footer>
     </main>
     <script>
+        window.onresize = function(){
+            window.location.reload();
+        }
+
         if (window.innerWidth < 768) {
             let img_box = document.querySelector('.img_box');
             let imgsWidth = img_box.querySelector('li').offsetWidth
