@@ -223,9 +223,9 @@
         .acting-word::before{
             content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, #232323 0%, transparent 100%);
+            top: 0;width: 100%;
+            height: 200%;
+            background: linear-gradient(0deg, #232323 50%, transparent 100%);
         }
         .acting-word>div{
             position: absolute;
@@ -233,19 +233,36 @@
             padding: 1rem 1rem 0;
         }
         footer {
-            padding: 30% 0 5%;
+            position: relative;padding: 15% 0 5%;
             text-align: center;
             background: url(images/bg-footer.png) no-repeat center top/cover;
+            z-index: 0;
         }
-        footer .container{
+        footer .container {
+            position: relative;
+            width: 300px;
+            height: 60px;
+            /* 超出隐藏 */
+            overflow: hidden;  
+        }
+        footer .img_box{
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* html中的第一张图片不是我们想要显示，第二张才是我们轮播图的第一张图片因此要让这排图片往左移动一张图片的距离 */
+            display: flex;
             justify-content: center;
             flex-flow: wrap-reverse;
         }
+        .img_box li {
+            float: left;
+            list-style: none;
+        }
         .game{
-            width: 120px;
-            height: 120px;
+            width: 60px;
+            height: 60px;
             background: url(images/1082216-2103220A53935-removebg-preview.png)no-repeat center/contain;
-            padding: 26px;
+            padding: 14px;
         }
         .text-light{color: rgba(255,255,255,.8)}
         .bg-b{background-color: rgba(0,0,0,1);}
@@ -256,6 +273,11 @@
         }
         @media (min-width: 768px){
             .container{max-width: 720px;}
+            footer .container{
+                height: auto;
+                overflow: inherit;
+            }
+            footer .img_box{position:relative;}
         }
         @media (min-width: 992px){
             body {background: url(images/BG1.jpg)no-repeat top center/200%;}
@@ -283,6 +305,7 @@
             .acting {padding: 5rem 1rem 1rem;}
             .acting-word::before {background: unset;}
             footer {padding: 13% 0 5%;}
+            .game{width: 120px;height: 120px;padding: 26px;}
         }
         @media (min-width: 1200px){
             .container{max-width: 1140px;}
@@ -376,26 +399,95 @@
         </section>
         <footer>
             <div class="container">
-                <div class="game"><img class="w-100" src="images/LOGO/ag.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/bk89.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/cq9.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/evo.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/fc.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/jdb.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/jili.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/joker.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/ka.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/mabu.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/ninekg.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/pp.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/rsg.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/sexy.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/tez.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/ug.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/win568.png" alt=""></div>
-                <div class="game"><img class="w-100" src="images/LOGO/yb.png" alt=""></div>
+                <ul class="img_box">
+                    <li class="game"><img class="w-100" src="images/LOGO/yb.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/ag.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/bk89.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/cq9.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/evo.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/fc.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/jdb.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/jili.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/joker.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/ka.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/mabu.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/ninekg.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/pp.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/rsg.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/sexy.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/tez.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/ug.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/win568.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/yb.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/ag.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/bk89.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/cq9.png" alt=""></li>
+                    <li class="game"><img class="w-100" src="images/LOGO/evo.png" alt=""></li>
+                </ul>
             </div>
         </footer>
     </main>
+    <script>
+        if (window.innerWidth < 768) {
+            let img_box = document.querySelector('.img_box');
+            let imgsWidth = img_box.querySelector('li').offsetWidth
+            let imgs = img_box.querySelectorAll('img');
+            // 记录第几张图片
+            let index = 0;  
+            let timer = null;
+
+            // 设置图片容器大小
+            // imgContainerW：img_box本身宽度，为400
+            let imgContainerW = imgsWidth
+            console.log(imgContainerW)
+            img_box.style.width = imgContainerW * imgs.length + 'px'
+            // 设置容器位置
+            img_box.style.left = 0 + 'px';
+
+            function swapImg() {
+                // 修改img_box的定位，往左偏移 index * imgContainerW
+                img_box.style.left = -index * imgContainerW + 'px';
+            }
+
+            function swapFormat() {
+                index++;  // 进入下一张图片
+                // 如果是在最后一张图片
+                if (index >= (imgs.length - 5)) {
+                    // 此处是为了防止频繁点击按钮，index++，导致index超过4，变成5、6、7...
+                    // 当index>=4，我们强行让其等于4,类似防抖
+                    index = (imgs.length - 5);  
+                    img_box.style.transition = 'all, linear, 1s';
+                    img_box.style.left = -index * imgContainerW + 'px';
+                    
+                    // 此处就是我们为实现无缝轮播，做的手脚 
+                    // 通过延时定时器，当图片过渡完，立刻马上切换到第一张图片
+                    setTimeout(function() {
+                        index = 0;  // 第一张图片
+                        img_box.style.transition = '';  // 无过度
+                        swapImg();
+                    }, 500)
+                
+                    // 如果是其它图片，正常过渡切换
+                } else {
+                    img_box.style.transition = 'all, linear, 1.5s';
+                    swapImg();
+                }
+            }
+
+            // 添加定时器，调用函数
+            timer = setInterval(swapFormat, 3000)
+
+            // 当鼠标在图片上、左箭头、右箭头时清除定时器，即图片不轮播
+            img_box.addEventListener('mouseover', function() {
+                clearInterval(timer)
+            })
+
+            // 当鼠标离开图片、左箭头、右箭头时开启定时器，即图片继续轮播
+            img_box.addEventListener('mouseout', function() {
+                timer = setInterval(swapFormat, 3000)
+            })
+        }
+
+    </script>
 </body>
 </html>
